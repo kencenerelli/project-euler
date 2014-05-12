@@ -1,4 +1,4 @@
 project-euler
 =============
 
-project euler solutions
+My C# solutions for project euler problems.
