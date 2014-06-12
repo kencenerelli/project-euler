@@ -1,20 +1,28 @@
-int firstNumber = 0;
-int secondNumber = 1;
-int sum = 0;
-int evenSum = 0;
-
-while (secondNumber < 4000000) {
-	
-	sum = firstNumber + secondNumber;
-	
-	if (sum % 2 == 0)
+using System;
+					
+public class Program
+{
+	public static void Main()
 	{
-		evenSum += sum;
+		int firstNumber = 0;
+		int secondNumber = 1;
+		int sum = 0;
+		int evenSum = 0;
+		
+		while (secondNumber < 4000000) {
+		
+			sum = firstNumber + secondNumber;
+		
+			if (sum % 2 == 0)
+			{
+				evenSum += sum;
+			}
+		 
+			firstNumber = secondNumber;
+			secondNumber = sum;
+		
+		}
+		
+		Console.WriteLine(evenSum);
 	}
- 
-	firstNumber = secondNumber;
-	secondNumber = sum;
-	
 }
-
-Console.WriteLine(evenSum);
