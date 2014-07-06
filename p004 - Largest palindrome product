@@ -1,0 +1,33 @@
+using System;
+using System.Linq;
+
+public class Program
+{
+	public static void Main()
+	{
+		long iNumber = 1;
+		long jNumber = 1;
+		long maxNumber = 0;
+		long result;
+		
+		for (int i = 1; i < 1000; i++)
+		{
+			for (int j = 1; j < 1000; j++)
+			{
+				result = i * j;
+				string output = new string (result.ToString().ToCharArray().Reverse().ToArray());
+				if (result == long.Parse(output))
+				{
+					if (maxNumber < result)
+					{
+						iNumber = i;
+						jNumber = j;
+						maxNumber = result;
+					}
+				}
+			}
+		}
+
+		Console.WriteLine(string.Format("The largest palindrome made from the product of two 3-digit numbers is {0}. " + "The two numbers are {1} and {2}.", maxNumber, iNumber, jNumber));
+	}
+}
