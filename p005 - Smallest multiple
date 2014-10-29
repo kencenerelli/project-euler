@@ -1,0 +1,37 @@
+using System;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool done = true;
+            int increment = 0;
+            bool remainder = false;
+
+            while (done)
+            {
+                increment++;
+
+                for (int i = 1; i <= 20; i++)
+                {
+                    if ((increment % i) == 0)
+                    {
+                        remainder = true;
+                    }
+                    else
+                    {
+                        remainder = false;
+                        break;
+                    }
+                }
+                if (remainder)
+                {
+                    Console.WriteLine(increment);
+                    break;
+                }
+            }
+        }
+    }
+}
