@@ -1,0 +1,30 @@
+using System;
+
+namespace Euler6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const int NATURAL_NUMBERS = 100;
+            const int EXPONENT = 2;
+
+            double sumOfSquares = 0;
+            double sumOfNumbers = 0;
+            double squareOfSum = 0;
+
+            for (int i = 0; i <= NATURAL_NUMBERS; i++)
+            {
+                //square each number and add to sum
+                sumOfSquares += Math.Pow(i, 2);
+
+                //sum all numbers
+                sumOfNumbers += i;
+            }
+            //square sum of all numbers
+            squareOfSum = Math.Pow(sumOfNumbers, EXPONENT);
+
+            Console.WriteLine("The difference between the sum of the squares and the square of the sum is: " + (squareOfSum - sumOfSquares));
+        }
+    }
+}
