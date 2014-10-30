@@ -16,7 +16,7 @@ namespace Euler6
             for (int i = 0; i <= NATURAL_NUMBERS; i++)
             {
                 //square each number and add to sum
-                sumOfSquares += Math.Pow(i, 2);
+                sumOfSquares += Math.Pow(i, EXPONENT);
 
                 //sum all numbers
                 sumOfNumbers += i;
